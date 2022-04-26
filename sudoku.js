@@ -17,8 +17,6 @@ let solutionColumns = [];
 let solutionBoxes = []; // 2d array, both indexes are ordered left to right then go to next line of boxes/numbers
 const totalSize = 9; // has to be divisable by 3 to an integer
 const boxSize = totalSize / 3; 
-console.log("expected output: ", totalSize * totalSize)
-let iterations = 0;
 
 // create empty 2d array to represet rows, columns, and boxes
 for (let r=0; r<totalSize; r++) {
@@ -39,7 +37,6 @@ for (let r=0; r<totalSize; r++) {
         let cellReady = false;
         const maxRetries = 1000;
         let retries = 0;
-        iterations++;
         // const bBox, bCell = findBoxByRC(r, c);
         while (cellReady === false && retries < maxRetries) {
             const cellValue = randomNumber(1, totalSize);
@@ -55,7 +52,7 @@ for (let r=0; r<totalSize; r++) {
                 cellReady = true;
             } else {
                 retries++;
-                
+                if (retries > 990) console.log(cellValue)
                 // NOTE FOR LATERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
                 // The reason this is getting 0s sometimes is the retries is hitting 1000
                 // Not sure why it can't find a solution
@@ -75,4 +72,5 @@ for (let r=0; r<totalSize; r++) {
 console.log(solutionRows)
 console.log(solutionColumns)
 console.log(solutionBoxes)
-console.log("got: ", iterations)
+
+document.getElementById("result").innerHTML = `${solutionRows}`

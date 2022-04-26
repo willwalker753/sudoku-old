@@ -1,0 +1,19 @@
+.outer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top:50px;
+  align-items: center;
+}
+.inner {
+  display: flex;
+}
+p {
+  width: 55px;
+  text-align: center;
+  border: 1px solid lightblue;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+}
