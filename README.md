@@ -1,3 +1,3 @@
-# Sudoku - In progress
+# Outdated
 
-Yes the code is bad, not meant to be good. Just rushing and trying out the concept
+Moved to new repo, this was a tmp first attempt
